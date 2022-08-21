@@ -1,0 +1,727 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Vazir";
+}
+
+@font-face {
+  font-family: "Vazir";
+  src: url("../assets/fonts/Vazir");
+  src: url("../assets/fonts/Vazir?#iefix") format("embedded-opentype"), url("../assets/fonts/Vazir.woff") format("woff"), url("../assets/fonts/Vazir.ttf") format("truetype"), url("../assets/fonts/Vazir.svg#FontName") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+.setting {
+  width: 0;
+  height: 0;
+  border: 25px solid transparent;
+  border-bottom: 25px solid #ddd;
+  border-left: 25px solid #ddd;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  color: #181818;
+}
+.setting i {
+  font-size: 13px;
+}
+
+.go-up {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  background-color: #181818;
+  position: fixed;
+  bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.go-up i {
+  color: #ddd;
+}
+
+.line {
+  width: 15px;
+  height: 1px;
+  background-color: #181818;
+  margin-left: 10px;
+  transition: all 0.2s linear;
+}
+
+.circle {
+  width: 4px;
+  height: 4px;
+  background-color: #181818;
+  border-radius: 10px;
+  transition: all 0.2s linear;
+}
+
+.post-line {
+  width: 130px;
+  height: 1px;
+  background-color: #181818;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  color: #181818;
+  transition: all 0.2s linear;
+  font-family: fantasy;
+}
+
+.socialmedia {
+  margin-bottom: 10px;
+  display: flex;
+}
+.socialmedia > a {
+  display: flex;
+  justify-content: center;
+  margin-left: 5px;
+  width: 25px;
+}
+.socialmedia > a > i {
+  font-size: 18px;
+  color: #ddd;
+}
+.socialmedia a:hover i {
+  color: #888;
+}
+
+.spanAdd {
+  background-color: #ddd;
+}
+
+.header-container {
+  width: 100%;
+  height: 650px;
+  padding: 0 40px;
+  background: url("../assets/images/L_sfondo-2.jpeg");
+  display: flex;
+  justify-content: center;
+}
+.header-container .nav-scroll {
+  height: 60px;
+  background-color: #181818;
+  transition: all 0.2s linear;
+}
+.header-container nav {
+  width: 100%;
+  height: 130px;
+  padding: 0 100px;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  transition: all 0.2s linear;
+}
+.header-container nav .black-container {
+  padding-right: 100px;
+  padding-left: 50px;
+  width: 800px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -800px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: #181818;
+  transition: all 0.4s ease-in-out;
+}
+.header-container nav .black-container ul {
+  width: 550px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ddd;
+  margin-top: 120px;
+  padding-top: 30px;
+}
+.header-container nav .black-container ul li {
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s linear;
+}
+.header-container nav .black-container ul li a {
+  color: #ddd;
+  font-size: 16px;
+}
+.header-container nav .black-container ul li span {
+  width: 4px;
+  height: 4px;
+  background-color: none;
+  margin-bottom: -55px;
+  border-radius: 10px;
+}
+.header-container nav .black-container ul li:hover a {
+  color: #888;
+}
+.header-container nav .black-container ul li:hover span {
+  background-color: #888;
+}
+.header-container nav .black-container > div {
+  width: 550px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-container nav .black-container > div .lang-container ul {
+  width: 350px;
+  padding-top: 0;
+  border-top: 0;
+  margin-top: 0;
+}
+.header-container nav .black-container > div .lang-container ul li {
+  height: 30px;
+}
+.header-container nav .black-container > div .lang-container ul li a {
+  font-size: 14px;
+  transition: all 0.2s linear;
+}
+.header-container nav .black-container > div .lang-container ul li span {
+  margin-bottom: -35px;
+  transition: all 0.2s linear;
+}
+.header-container nav .black-container > div .social-container {
+  width: 150px;
+  border: 1px solid #ddd;
+  padding: 20px 10px;
+}
+.header-container nav .nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 650px;
+}
+.header-container nav .nav-container .menu-bar {
+  width: 40px;
+  height: 36px;
+  padding: 10px;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 11;
+}
+.header-container nav .nav-container .menu-bar:hover {
+  cursor: pointer;
+}
+.header-container nav .nav-container .menu-bar div {
+  width: 21px;
+  height: 1.5px;
+  background-color: #ddd;
+  transition: all 0.4s linear;
+}
+.header-container nav .nav-container .menu-bar #line-1 {
+  transform-origin: top right;
+}
+.header-container nav .nav-container .menu-bar #line-3 {
+  transform-origin: bottom right;
+}
+.header-container nav .nav-container .menu-bar .line-1 {
+  transform: rotate(-45deg);
+}
+.header-container nav .nav-container .menu-bar .line-2 {
+  opacity: 0;
+}
+.header-container nav .nav-container .menu-bar .line-3 {
+  transform: rotate(45deg);
+}
+.header-container nav .nav-container ul {
+  margin-bottom: 25px;
+  width: 550px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 11;
+  transition: all 0.2s linear;
+}
+.header-container nav .nav-container ul li {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s linear;
+}
+.header-container nav .nav-container ul li a {
+  color: #ddd;
+  font-size: 16px;
+}
+.header-container nav .nav-container ul li span {
+  width: 4px;
+  height: 4px;
+  background-color: none;
+  margin-bottom: 25px;
+  border-radius: 10px;
+}
+.header-container nav .nav-container ul li:hover a {
+  color: #888;
+}
+.header-container nav .nav-container ul li:hover span {
+  background-color: #888;
+}
+.header-container nav .logo {
+  color: #ddd;
+  font-size: 25px;
+  letter-spacing: 20px;
+  font-weight: 800;
+  transition: all 0.5s linear;
+}
+.header-container nav .logo:hover {
+  cursor: pointer;
+  color: #888;
+}
+.header-container .main-img {
+  width: 100%;
+  height: 700px;
+  background: url("../assets/images/L_intarsio-cesar-kitchen.jpeg");
+  background-size: cover;
+  margin-top: 130px;
+}
+.header-container .main-img .my-kitchen {
+  width: 200px;
+  height: 200px;
+  margin-top: 600px;
+  margin-right: 150px;
+  font-size: 30px;
+  text-shadow: 0 0 5px #333;
+}
+
+.post-container {
+  width: 100%;
+  height: 430px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 40px;
+  margin-top: 400px;
+}
+.post-container .post-body {
+  width: 400px;
+}
+.post-container .post-body h3 {
+  padding-bottom: 20px;
+  font-size: 23px;
+}
+.post-container .post-body p {
+  text-align: justify;
+}
+.post-container .post-body a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #181818;
+  transition: all 0.2s linear;
+}
+.post-container .post-body a:hover {
+  color: #888;
+}
+.post-container .post-body a:hover div {
+  background-color: #888;
+}
+.post-container .post-img {
+  width: 580px;
+  height: 320px;
+  position: relative;
+}
+.post-container .post-img:hover .cover-img-dark {
+  background-color: rgba(0, 0, 0, 0);
+  color: #ccc;
+}
+.post-container .post-img img {
+  width: 100%;
+  height: 100%;
+  transform: scaleX(-1);
+  position: absolute;
+}
+.post-container .post-img .cover-img-dark {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9;
+  position: absolute;
+  color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 8px;
+  transition: all 0.2s linear;
+}
+.post-container .post-img .cover-img-dark i {
+  font-size: 10px;
+  margin-right: 5px;
+}
+
+.euro-container {
+  width: 100%;
+  height: 480px;
+  background-color: #E8BCA4;
+  padding: 80px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.euro-container .video-container {
+  width: 580px;
+}
+.euro-container .video-container video {
+  width: 100%;
+}
+.euro-container .euro-line {
+  width: 130px;
+  height: 1px;
+  background-color: #181818;
+  margin-top: 30px;
+  margin-right: -70px;
+  z-index: 99;
+}
+.euro-container .euro-body {
+  margin-top: 10px;
+  width: 500px;
+}
+.euro-container .euro-body h3 {
+  margin: 10px 0;
+}
+.euro-container .euro-body p {
+  margin-top: 20px;
+  line-height: 2.5;
+}
+.euro-container .euro-body a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 30px;
+  color: #181818;
+  transition: all 0.2s linear;
+}
+.euro-container .euro-body a:hover {
+  color: #888;
+}
+.euro-container .euro-body a:hover div {
+  background-color: #888;
+}
+
+.gallery-container {
+  width: 100%;
+  height: 100px;
+  margin-top: 50px;
+}
+.gallery-container .img-cover {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  z-index: 9;
+  position: absolute;
+  transition: all 0.2s linear;
+}
+.gallery-container .item {
+  width: 45%;
+  height: 350px;
+  margin: 70px 0;
+  position: relative;
+  margin-top: 300px;
+  opacity: 0;
+  transition: all 1s ease-in;
+}
+.gallery-container .item img {
+  width: 100%;
+  height: 100%;
+}
+.gallery-container .item:hover .img-cover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.gallery-container .item:hover .icon-container {
+  color: #888;
+}
+.gallery-container .item:hover .icon-container div {
+  background-color: #888;
+}
+.gallery-container .item:nth-child(odd) {
+  float: right;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+.gallery-container .item:nth-child(even) {
+  float: left;
+  margin-left: 40px;
+}
+.gallery-container .item-1 {
+  height: 200px;
+  margin-right: 0 !important;
+  margin-bottom: -50px;
+  display: flex;
+  -webkit-animation-delay: 0ms;
+          animation-delay: 0ms;
+}
+.gallery-container .item-1 .item-1-body {
+  color: #181818;
+  width: 350px;
+  margin-right: 50px;
+}
+.gallery-container .item-1 .item-1-body h3 {
+  margin-bottom: 15px;
+}
+.gallery-container .item-2 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.gallery-container .item-3 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.gallery-container .item-4 {
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+}
+.gallery-container .item-5 {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+.gallery-container .item-receive {
+  margin-top: 70px;
+  opacity: 1;
+}
+
+.architecture-container {
+  width: 100%;
+  height: 400px;
+  margin-top: 1200px;
+  margin-bottom: 30px;
+  background: url("../assets/images/architects_bg.png");
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 160px 0 120px;
+}
+.architecture-container > div > p {
+  font-size: 25px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 5px #666;
+}
+.architecture-container > div div,
+.architecture-container > div a {
+  font-family: "Vazir";
+  font-size: 11px;
+  transition: all 0.2s linear;
+}
+.architecture-container div:hover a {
+  color: #888;
+}
+.architecture-container div:hover a div {
+  background-color: #888;
+}
+.architecture-container img {
+  height: 300px;
+}
+
+.slider-container {
+  margin-top: 150px;
+  height: 600px;
+  width: 100%;
+}
+.slider-container .slider {
+  width: 85%;
+  height: 80%;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.slider-container .slider .card-container {
+  position: absolute;
+  display: flex;
+  margin-top: 30px;
+  right: 0;
+}
+.slider-container .slider .card {
+  width: 250px;
+  height: 500px;
+  margin: 0 30px;
+  position: relative;
+  cursor: pointer;
+}
+.slider-container .slider .card:hover .cover-card {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.slider-container .slider .card .cover-card {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  position: absolute;
+  transition: all 0.2s linear;
+}
+.slider-container .slider .card a {
+  width: 100%;
+}
+.slider-container .slider .card a img {
+  width: 100%;
+  height: 350px;
+}
+.slider-container .slider .card a h4 {
+  color: #181818;
+  margin-bottom: 25px;
+}
+.slider-container .slider .card a p {
+  color: #888;
+  font-size: 12px;
+}
+.slider-container .control-container {
+  display: flex;
+  justify-content: space-between;
+}
+.slider-container .control-container .controller {
+  display: flex;
+  margin-left: 150px;
+  width: 100px;
+  justify-content: space-between;
+}
+.slider-container .control-container .controller > div {
+  width: 20px;
+  height: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider-container .control-container .controller > div:hover div {
+  background-color: #888;
+}
+.slider-container .control-container .controller > div .line {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  background-color: #1D1D1B;
+}
+footer .main-footer {
+  width: 100%;
+  padding: 40px 50px;
+  display: flex;
+  justify-content: space-between;
+  color: #ddd;
+}
+footer .main-footer > div {
+  width: 33%;
+}
+footer .main-footer .contact-us h4 {
+  margin-bottom: 10px;
+}
+footer .main-footer .contact-us > a {
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #ddd;
+  display: block;
+}
+footer .main-footer .contact-us > a:hover {
+  color: #888;
+}
+footer .main-footer .subscribe h4 {
+  margin-bottom: 15px;
+}
+footer .main-footer .subscribe label {
+  margin-top: 30px;
+  font-size: 12px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  color: #888;
+}
+footer .main-footer .subscribe label .box {
+  width: 17px;
+  height: 17px;
+  background-color: transparent;
+  border: 1px solid #888;
+  display: block;
+  margin-left: 10px;
+  transition: all 0.2s linear;
+}
+footer .main-footer .subscribe label:hover input ~ .box {
+  background-color: #ccc;
+}
+footer .main-footer .subscribe label input:checked input ~ .tik {
+  display: block;
+}
+footer .main-footer .subscribe label input[type=checkbox] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+footer .main-footer .subscribe label input:checked ~ span.tik {
+  right: 6px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid #ddd;
+  border-width: 0px 2px 2px 0;
+  transform: rotate(45deg);
+  position: absolute;
+}
+footer .main-footer .subscribe label input:checked ~ span.box {
+  background-color: transparent;
+}
+footer .main-footer .subscribe a {
+  color: #888;
+  text-decoration: underline;
+  padding: 0 5px;
+}
+footer .main-footer .subscribe form > div {
+  display: flex;
+  justify-content: flex-start;
+}
+footer .main-footer .subscribe input[type=email] {
+  background-color: transparent;
+  width: 200px;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  outline: 0;
+  color: #ddd;
+}
+footer .main-footer .subscribe input[type=submit] {
+  background-color: #888;
+  color: #ddd;
+  width: 100px;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  outline: 0;
+  border-right: 0;
+  cursor: pointer;
+}
+footer .main-footer .links {
+  padding-right: 100px;
+}
+footer .main-footer .links ul > li > a {
+  color: #ddd;
+  font-size: 13px;
+  display: block;
+  padding-bottom: 8px;
+}
+footer .main-footer .links ul > li > a:hover {
+  color: #888;
+}
+footer .main-footer .links .credits {
+  margin-top: 20px;
+}
+footer .copy-right {
+  text-align: center;
+  width: 100%;
+  background-color: #2C2C2C;
+  color: #999;
+  font-size: 12px;
+  padding: 10px;
+}/*# sourceMappingURL=style.css.map */
